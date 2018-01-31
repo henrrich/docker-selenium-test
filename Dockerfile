@@ -17,4 +17,4 @@ ADD search-module.xml $BASE_DIR/search-module.xml
 # MODULE  = order-module / search-module
 # GRIDHOST = selenium hub hostname / ipaddress
 
-ENTRYPOINT /usr/bin/java -cp $BASE_DIR/container-test.jar: -DseleniumHubHost=$SELENIUM_HUB -Dbrowser=$BROWSER org.testng.TestNG $BASE_DIR/$MODULE
+ENTRYPOINT /usr/bin/java -cp $BASE_DIR/container-test.jar:$BASE_DIR/libs -DseleniumHubHost=$SELENIUM_HUB -Dbrowser=$BROWSER org.testng.TestNG $BASE_DIR/$MODULE
